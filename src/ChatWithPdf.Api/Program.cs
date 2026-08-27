@@ -1,3 +1,11 @@
+using ChatWithPdf.Infrastructure;
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddInfrastructure(
+    builder.Configuration);
+
+var app = builder.Build();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
