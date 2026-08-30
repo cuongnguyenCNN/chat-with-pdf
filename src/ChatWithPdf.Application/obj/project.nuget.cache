@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Qf1KnoihqduAp9jr839EmgW9zVUSFz/lQiSUh/pP6IIHorAhdHw51jLSdspi4JDjO4Ie0HeJkyzq8iAuhbqOqg==",
+  "dgSpecHash": "h9qwHljKsHpTCCOqmfjVFyeq9fbqof8NF994cknbylRpkm4gGQd9VAVQ8SK6kMc0HNM5P4y6PmeoAoMu9SE0lw==",
   "success": true,
   "projectFilePath": "E:\\Projects\\chat-with-pdf\\src\\ChatWithPdf.Application\\ChatWithPdf.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\cuong\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\cuong\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\cuong\\.nuget\\packages\\npgsql\\8.0.5\\npgsql.8.0.5.nupkg.sha512",
+    "C:\\Users\\cuong\\.nuget\\packages\\pgvector\\0.3.2\\pgvector.0.3.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -333,6 +333,9 @@
       "ChatWithPdf.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Pgvector": "0.3.2"
+        },
         "compile": {
           "bin/placeholder/ChatWithPdf.Domain.dll": {}
         },

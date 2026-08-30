@@ -1,0 +1,16 @@
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ChatWithPdf.Application.csproj.AssemblyReference.cache
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ChatWithPdf.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ChatWithPdf.Application.AssemblyInfoInputs.cache
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ChatWithPdf.Application.AssemblyInfo.cs
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ChatWithPdf.Application.csproj.CoreCompileInputs.cache
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ChatWithPdf.Application.sourcelink.json
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\bin\Debug\net8.0\ChatWithPdf.Application.deps.json
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\bin\Debug\net8.0\ChatWithPdf.Application.dll
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\bin\Debug\net8.0\ChatWithPdf.Application.pdb
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\bin\Debug\net8.0\ChatWithPdf.Domain.dll
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\bin\Debug\net8.0\ChatWithPdf.Domain.pdb
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ChatWithPdf.Application.csproj.CopyComplete
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ChatWithPdf.Application.dll
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\refint\ChatWithPdf.Application.dll
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ChatWithPdf.Application.pdb
+E:\Projects\chat-with-pdf\src\ChatWithPdf.Application\obj\Debug\net8.0\ref\ChatWithPdf.Application.dll

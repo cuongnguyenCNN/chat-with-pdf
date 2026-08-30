@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lCtGQKXQ+e2aiqHDHPj93zs6Ocoj/Gxk45hn4d/cfr+Tbh1nIwqRvJcd3kBFa9gZGgu3rTqkd4SkPsJnEFcQjA==",
+  "dgSpecHash": "5ItVNMaotDJ4r4aYP4a+YNZylyOA68JTyQX5NzfnhQV/pyt5RdA7hUBagEjiI9/e9wtSZwq18m4QAp+EyYHyzQ==",
   "success": true,
   "projectFilePath": "E:\\Projects\\chat-with-pdf\\src\\ChatWithPdf.Infrastructure\\ChatWithPdf.Infrastructure.csproj",
   "expectedPackageFiles": [
