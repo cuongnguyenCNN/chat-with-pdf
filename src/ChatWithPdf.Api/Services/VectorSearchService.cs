@@ -2,6 +2,7 @@ using ChatWithPdf.Api.Data;
 using ChatWithPdf.Api.Models;
 using Microsoft.EntityFrameworkCore;
 using Pgvector;
+using Pgvector.EntityFrameworkCore;
 
 namespace ChatWithPdf.Api.Services;
 

@@ -1,15 +1,13 @@
 public class Document
 {
-    public Guid Id { get; private set; }
+    public Guid Id { get; set; }
 
-    public string FileName { get; private set; } = null!;
+    public string FileName { get; set; } = string.Empty;
 
-    public string Status { get; private set; } = null!;
+    public string Status { get; set; } = string.Empty;
 
-    public DateTime CreatedAt { get; private set; }
+    public DateTime CreatedAt { get; set; }
 
-    public DateTime UpdatedAt { get; private set; }
-
-    public ICollection<DocumentChunk> Chunks { get; private set; }
+    public ICollection<DocumentChunk> Chunks { get; set; }
         = new List<DocumentChunk>();
 }

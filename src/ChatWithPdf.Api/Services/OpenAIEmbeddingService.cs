@@ -1,20 +1,23 @@
+
 using OpenAI.Embeddings;
 
 namespace ChatWithPdf.Api.Services;
 
-public class OpenAIEmbeddingService
-    : IEmbeddingService
+public class OpenAIEmbeddingService : IEmbeddingService
 {
     private readonly EmbeddingClient _client;
 
-    public OpenAIEmbeddingService(
-        IConfiguration configuration)
+    public OpenAIEmbeddingService(IConfiguration configuration)
     {
-        var apiKey =
-            configuration["OpenAI:ApiKey"]
-            ?? throw new InvalidOperationException(
-                "OpenAI API key is missing."
+        var apiKey = configuration["OpenAI:ApiKey"];
+
+        if (string.IsNullOrWhiteSpace(apiKey))
+        {
+            throw new InvalidOperationException(
+                "OpenAI API key is missing. " +
+                "Configure OpenAI:ApiKey using User Secrets."
             );
+        }
 
         var model =
             configuration["OpenAI:EmbeddingModel"]
@@ -22,8 +25,7 @@ public class OpenAIEmbeddingService
 
         _client = new EmbeddingClient(
             model,
-            apiKey
-        );
+            apiKey);
     }
 
     public async Task<float[]> CreateEmbeddingAsync(
@@ -33,9 +35,11 @@ public class OpenAIEmbeddingService
         var result =
             await _client.GenerateEmbeddingAsync(
                 text,
-                cancellationToken: cancellationToken
-            );
+                cancellationToken: cancellationToken);
 
-        return result.Value.ToFloats().ToArray();
+        return result.Value
+            .ToFloats()
+            .ToArray();
     }
 }
+

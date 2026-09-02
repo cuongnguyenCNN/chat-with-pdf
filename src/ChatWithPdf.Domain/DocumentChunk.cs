@@ -1,18 +1,21 @@
 using Pgvector;
 
+
 public class DocumentChunk
 {
-    public Guid Id { get; private set; }
+    public Guid Id { get; set; }
 
-    public Guid DocumentId { get; private set; }
+    public Guid DocumentId { get; set; }
 
-    public string Content { get; private set; } = null!;
+    public Document Document { get; set; } = null!;
 
-    public int ChunkIndex { get; private set; }
+    public int ChunkIndex { get; set; }
 
-    public Vector? Embedding { get; private set; }
+    public int? PageNumber { get; set; }
 
-    public DateTime CreatedAt { get; private set; }
+    public string Content { get; set; } = string.Empty;
 
-    public Document Document { get; private set; } = null!;
+    public Vector? Embedding { get; set; }
+
+    public int TokenCount { get; set; }
 }

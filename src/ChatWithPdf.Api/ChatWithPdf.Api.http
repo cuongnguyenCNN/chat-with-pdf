@@ -1,6 +1,6 @@
-@ChatWithPdf.Api_HostAddress = http://localhost:5074
+@ChatWithPdf.Api2_HostAddress = http://localhost:5135
 
-GET {{ChatWithPdf.Api_HostAddress}}/weatherforecast/
+GET {{ChatWithPdf.Api2_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
