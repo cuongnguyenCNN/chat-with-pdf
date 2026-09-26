@@ -13,7 +13,7 @@ using Pgvector;
 namespace ChatWithPdf.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260901070305_InitialCreate")]
+    [Migration("20260923052858_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

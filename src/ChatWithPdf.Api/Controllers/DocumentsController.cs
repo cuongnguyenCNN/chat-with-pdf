@@ -89,11 +89,11 @@ public class DocumentsController : ControllerBase
                     var content =
                         pageChunks[i];
 
-                    var embedding =
-                        await _embeddingService
-                            .CreateEmbeddingAsync(
-                                content,
-                                cancellationToken);
+                    //var embedding =
+                    //    await _embeddingService
+                    //        .CreateEmbeddingAsync(
+                    //            content,
+                    //            cancellationToken);
 
                     chunks.Add(
                         new DocumentChunk
@@ -103,8 +103,8 @@ public class DocumentsController : ControllerBase
                             ChunkIndex = i,
                             PageNumber = page.PageNumber,
                             Content = content,
-                            Embedding = new Vector(
-                                embedding),
+                            //Embedding = new Vector(
+                            //    embedding),
                             TokenCount = content.Length
                         });
                 }
@@ -203,5 +203,39 @@ public class DocumentsController : ControllerBase
             cancellationToken);
 
         return NoContent();
+    }
+
+    [HttpGet("{id}/chunks")]
+    public async Task<ActionResult<List<DocumentChunkDto>>> GetChunks(
+    Guid id,
+    CancellationToken cancellationToken)
+    {
+        var documentExists = await _db.Documents
+            .AnyAsync(
+                x => x.Id == id,
+                cancellationToken);
+
+        if (!documentExists)
+        {
+            return NotFound(
+                new
+                {
+                    message = "Document not found."
+                });
+        }
+
+        var chunks = await _db.DocumentChunks
+            .Where(x => x.DocumentId == id)
+            .OrderBy(x => x.ChunkIndex)
+            .Select(x => new DocumentChunkDto(
+                x.Id,
+                x.ChunkIndex,
+                x.PageNumber,
+                x.Content,
+                x.TokenCount
+            ))
+            .ToListAsync(cancellationToken);
+
+        return Ok(chunks);
     }
 }

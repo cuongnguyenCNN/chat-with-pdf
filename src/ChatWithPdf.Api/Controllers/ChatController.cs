@@ -60,20 +60,27 @@ public class ChatController : ControllerBase
                 });
         }
 
-        var questionEmbedding =
-            await _embeddingService
-                .CreateEmbeddingAsync(
-                    request.Question,
-                    cancellationToken);
+        //var questionEmbedding =
+        //    await _embeddingService
+        //        .CreateEmbeddingAsync(
+        //            request.Question,
+        //            cancellationToken);
 
-        var results =
-            await _vectorSearch.SearchAsync(
-                request.DocumentId,
-                questionEmbedding,
-                5,
-                cancellationToken);
-
-        if (results.Count == 0)
+        //var results =
+        //    await _vectorSearch.SearchAsync(
+        //        request.DocumentId,
+        //        questionEmbedding,
+        //        5,
+        //        cancellationToken);
+        var newresults = await _db.DocumentChunks
+    .Where(x => x.DocumentId == request.DocumentId)
+    .OrderBy(x => x.ChunkIndex)
+    .Take(5)
+    .ToListAsync(cancellationToken);
+        var context = string.Join(
+    "\n\n--- CHUNK ---\n\n",
+    newresults.Select(x => x.Content));
+        if (newresults.Count == 0)
         {
             return Ok(
                 new AskQuestionResponse(
@@ -83,11 +90,13 @@ public class ChatController : ControllerBase
             );
         }
 
-        var answer =
-            await _chatService.GenerateAnswerAsync(
-                request.Question,
-                results,
-                cancellationToken);
+
+        var results = newresults.Select(x => new VectorSearchResult(x, 0)).ToList();
+        //var answer =
+        //    await _chatService.GenerateAnswerAsync(
+        //        request.Question,
+        //        results,
+        //        cancellationToken);
 
         var sources =
             results
@@ -103,7 +112,7 @@ public class ChatController : ControllerBase
 
         return Ok(
             new AskQuestionResponse(
-                answer,
+                "answer",
                 sources
             )
         );

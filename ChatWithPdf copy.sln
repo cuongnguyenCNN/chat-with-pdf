@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.9.12120.119 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8620F623-DFEC-47CD-9E7F-8C22B67CBDD5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithPdf.Application", "ChatWithPdf.Application\ChatWithPdf.Application.csproj", "{A3E118FF-4DB1-407C-8FED-AB9874F7AA05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithPdf.Application", "src\ChatWithPdf.Application\ChatWithPdf.Application.csproj", "{A3E118FF-4DB1-407C-8FED-AB9874F7AA05}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithPdf.Domain", "ChatWithPdf.Domain\ChatWithPdf.Domain.csproj", "{DB5B4A9E-95BD-441B-B8F6-91AE45EA3C3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithPdf.Domain", "src\ChatWithPdf.Domain\ChatWithPdf.Domain.csproj", "{DB5B4A9E-95BD-441B-B8F6-91AE45EA3C3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatWithPdf.Api", "ChatWithPdf.Api\ChatWithPdf.Api.csproj", "{D6D6337C-AD79-4166-A4D8-D74C5081BF4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatWithPdf.Api", "src\ChatWithPdf.Api\ChatWithPdf.Api.csproj", "{D6D6337C-AD79-4166-A4D8-D74C5081BF4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithPdf.Infrastructure", "ChatWithPdf.Infrastructure\ChatWithPdf.Infrastructure.csproj", "{D6D6337C-AD79-4166-A4D8-D74C5081BF4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithPdf.Infrastructure", "src\ChatWithPdf.Infrastructure\ChatWithPdf.Infrastructure.csproj", "{D6D6337C-AD79-4166-A4D8-D74C5081BF4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

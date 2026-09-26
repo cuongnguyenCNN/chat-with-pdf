@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\ChatWithPdf.Api.props" />
-</Project>
