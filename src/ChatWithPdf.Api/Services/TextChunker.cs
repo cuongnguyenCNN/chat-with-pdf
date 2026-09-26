@@ -4,8 +4,8 @@ public static class TextChunker
 {
     public static List<string> Chunk(
         string text,
-        int chunkSize = 1200,
-        int overlap = 200)
+        int chunkSize = 400,
+        int overlap = 80)
     {
         if (string.IsNullOrWhiteSpace(text))
             return new List<string>();
