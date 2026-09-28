@@ -2,7 +2,7 @@ namespace ChatWithPdf.Api.Services;
 
 public interface IPdfService
 {
-    Task<List<PdfPage>> ExtractTextAsync(
+    Task<List<ExtractedPage>> ExtractTextAsync(
         Stream stream);
 }
 

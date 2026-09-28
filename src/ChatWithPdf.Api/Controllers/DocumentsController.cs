@@ -77,7 +77,7 @@ public class DocumentsController : ControllerBase
 
             var chunks = new List<DocumentChunk>();
 
-            foreach (var page in pages)
+           foreach (var page in pages)
             {
                 var pageChunks =
                     TextChunker.Chunk(page.Text);
