@@ -45,10 +45,20 @@ public class PdfService : IPdfService
         Stream stream)
     {
         var extractor = _extractorSelector.Select(stream);
-
+        Console.WriteLine(
+        $"Extractor: {extractor.GetType().Name}");
         stream.Position = 0;
+        var pages = await extractor.ExtractAsync(stream);
+        //return await extractor.ExtractAsync(stream);
+        foreach (var page in pages.Take(3))
+        {
+            Console.WriteLine(
+                $"========== PAGE {page.PageNumber} ==========");
 
-        return await extractor.ExtractAsync(stream);
+            Console.WriteLine(page.Text);
+        }
+
+        return pages;
     }
 }
 //public sealed class PdfPigTextExtractor : IPdfService

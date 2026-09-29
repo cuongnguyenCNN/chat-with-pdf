@@ -1,7 +1,9 @@
 using ChatWithPdf.Api.Data;
 using ChatWithPdf.Api.Services;
-using Microsoft.EntityFrameworkCore;
+using ChatWithPdf.Application.Pdf;
 using ChatWithPdf.Domain;
+using ChatWithPdf.Infrastructure.Pdf;
+using Microsoft.EntityFrameworkCore;
 using Pgvector.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +28,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 //     });
 
 builder.Services.AddScoped<IPdfService, PdfService>();
+builder.Services.AddScoped<IPdfAnalyzer, PdfAnalyzer>();
 // Infrastructure
 builder.Services.AddScoped<PdfPigTextExtractor>();
 builder.Services.AddScoped<PdfPigLayoutExtractor>();
